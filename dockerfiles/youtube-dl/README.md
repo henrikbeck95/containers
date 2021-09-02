@@ -1,5 +1,9 @@
 # Pandoc
 
+## References
+
+- [Youtube-dl tutorial with examples for beginners](https://ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/)
+
 ## Description
 
 Script for easy usage of the [YouTube-dl container](https://hub.docker.com/r/henrikbeck95/youtube-dl).

@@ -1,19 +1,6 @@
 #!/usr/bin/env sh
 
 #############################
-#Instructions
-#############################
-#
-#Reference
-#- [Pandoc commands demo usage](https://pandoc.org/demos.html)
-#- [Create a publication chain with Pandoc and Docker](https://www.toptal.com/docker/pandoc-docker-publication-chain)
-#
-#Description
-#Converting Markdown to others documents formats using Pandoc from container.
-#Be sure the file you want to convert is inside this script file folder directory.
-#############################
-
-#############################
 #Declaring variables
 #############################
 

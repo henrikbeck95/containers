@@ -1,18 +1,6 @@
 #!/usr/bin/env sh
 
 #############################
-#Instructions
-#############################
-#
-#Reference
-#- [DockerHub](https://hub.docker.com/r/wernight/youtube-dl)
-#- [Youtube-dl tutorial with examples for beginners](https://ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/)
-#
-#Description
-#Download videos from YouTube using the Linux command line interface (CLI).
-#############################
-
-#############################
 #Declaring variables
 #############################
 
@@ -31,6 +19,9 @@ SOFTWARE_IMAGE_VERSION="v1.0"
 MESSAGE_HELP="
 \t\t\tYoutube video downloader
 \t\t\t------------------------\n
+[Description]
+Download videos from YouTube using the Linux command line interface (CLI).
+
 [Parameters]
 -h\t--help\t-?\t\t\tDisplay this help message
 -e\t--edit\t\t\t\tEdit this script file
