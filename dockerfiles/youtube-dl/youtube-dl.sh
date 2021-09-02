@@ -26,9 +26,7 @@ SOFTWARE="podman"
 #SOFTWARE_REPOSITORY="docker.io"
 SOFTWARE_REPOSITORY="localhost"
 SOFTWARE_IMAGE_NAME="henrikbeck95/youtube-dl"
-#SOFTWARE_IMAGE_NAME="wernight/youtube-dl:latest"
 SOFTWARE_IMAGE_VERSION="v1.0"
-#SOFTWARE_IMAGE_VERSION="latest"
 
 MESSAGE_HELP="
 \t\t\tYoutube video downloader
@@ -39,7 +37,7 @@ MESSAGE_HELP="
 -b\t--build\t\t\t\tBuild the $SOFTWARE_IMAGE_NAME container image
 -c\t--container-usage\t\tUse the container for using YouTude-dl with parameters
 -best\t--container-usage-best\t\tUse the container for downloading video and audio file
-#-mp3\t--container-usage-mp3\t\tUse the container for downloading .mp3 audio file
+-mp3\t--container-usage-mp3\t\tUse the container for downloading .mp3 audio file
 -mp4\t--container-usage-mp4\t\tUse the container for downloading .mp4 video file
 -p\t--container-pull\t\tDownload the $SOFTWARE_IMAGE_NAME container image
 -r\t--container-remove\t\tRemove the $SOFTWARE_IMAGE_NAME container image
@@ -87,7 +85,6 @@ container_remove(){
 	$SOFTWARE image rm -f $SOFTWARE_REPOSITORY/$SOFTWARE_IMAGE_NAME:$SOFTWARE_IMAGE_VERSION
 }
 
-#Testing
 container_usage(){
 	$SOFTWARE run --rm \
 		-v $(pwd):/downloads \
@@ -101,10 +98,7 @@ container_usage_mp3(){
 		$SOFTWARE_IMAGE_NAME:$SOFTWARE_IMAGE_VERSION \
 		-f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 \
 		-o '%(title)s.%(ext)s' \
-		https://www.youtube.com/watch?v=Ssvu2yncgWU
-		#$AUX_ALL
-	
-	#youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 <Video-URL>
+		$AUX_ALL
 }
 
 container_usage_mp4(){
@@ -116,7 +110,6 @@ container_usage_mp4(){
 		$AUX_ALL
 }
 
-#Testing
 container_usage_best(){
 	$SOFTWARE run --rm \
 		-v $(pwd):/downloads:rw \

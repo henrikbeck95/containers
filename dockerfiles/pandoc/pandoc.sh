@@ -27,8 +27,11 @@ SOFTWARE="podman"
 SOFTWARE_IMAGE="docker.io/pandoc/latex:latest"
 
 MESSAGE_HELP="
-\t\t\tDocuments conversor
-\t\t\t-------------------\n
+\t\t\tPandoc
+\t\t\t------\n
+[Description]
+A documents conversor tool
+
 [Parameters]
 -h\t--help\t-?\t\t\tDisplay this help message
 -e\t--edit\t\t\t\tEdit this script file
@@ -40,9 +43,6 @@ MESSAGE_HELP="
 Converting Markdown to Docx: > $ $0 -c README.md -s -o testing.docx
 Converting Markdown to HTML: > $ $0 -c README.md -s -o testing.html
 Converting Markdown to PDF: > $ $0 -c README.md -s -o testing.pdf
-
-[In case of problems...]
-$SOFTWARE run -it --rm -v /home/joker/sharing/projects_myself/trabalho_conclusao_curso/utils:/work/ -w /work/ docker.io/pandoc/latex README.md -o testing.pdf
 "
 
 MESSAGE_ERROR="Invalid option for $0!\n$MESSAGE_ERROR"
@@ -64,9 +64,6 @@ container_remove(){
 }
 
 container_usage(){
-	#display_message "$SOFTWARE run -it --rm -v $(pwd):/work/ -w /work/ $SOFTWARE_IMAGE README.md -o lalala.pdf"
-	#$SOFTWARE run -it --rm -v $(pwd):/work/ -w /work/ $SOFTWARE_IMAGE README.md -o lalala.pdf
-
 	display_message "Running the command... > $ $SOFTWARE run -it --rm -v $(pwd):/work/ -w /work/ $SOFTWARE_IMAGE \"$AUX_ALL\""
 	$SOFTWARE run -it --rm -v $(pwd):/work/ -w /work/ $SOFTWARE_IMAGE $AUX_ALL
 }

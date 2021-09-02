@@ -7,4 +7,4 @@ Script for easy usage of the [Pandoc Latex containers](https://hub.docker.com/r/
 ## Usage
 
 - Chech the **help** for displaying all the fast available possibilities.
-	> $ `document_converter.sh --help`
+	> $ `pandoc.sh --help`
