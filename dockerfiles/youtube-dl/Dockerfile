@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.14
 MAINTAINER Henrik Beck <henrikbeck95@gmail.com>
 
 RUN set -x && apk add --no-cache \
